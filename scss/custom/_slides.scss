@@ -1,0 +1,78 @@
+.slider {
+    background-image: url(../img/slider.jpg);
+    background-color: $color-default;
+    @include background-size(cover);
+    background-position: center center;
+    color: $color-text-on-dark;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.slider-slide {
+  @include center-vertical-flex;
+}
+
+.slider-wrap {
+  margin: 0 auto;
+}
+
+// slider tabs
+.slider-pager-page {
+  color: $color-link;
+}
+.slider-pager-page.active {
+  color: $color-text-on-dark;
+}
+//
+
+.slider ion-slide {
+  // background: $color-default;
+  // color: $color-text-on-dark;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.slider-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  color: $color-text-on-dark;
+  margin: 1em 0 .5em;
+}
+
+.slider-image {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 15em;
+  margin-bottom: 2.5em;
+}
+
+.slider-image > .wrap {
+  // max-width: 20em;
+  height: 0;
+  // height: 20em;
+  // width: 20em;
+  margin: 0 auto 1em;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+  // background: #fff;
+  @include border-radius(100%);
+  @include box-shadow(0 0 0 6px #fff);
+  background-color: #4CAF50;
+}
+
+.slider-image > .wrap > img {
+  width: 100%;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+}
+
+.slider-content {
+  min-height: 3.4em;
+  line-height: 1.2;
+}

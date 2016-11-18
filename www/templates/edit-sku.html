@@ -1,0 +1,18 @@
+
+<h2 class="h-label">Sku</h2>
+<div>
+	<img style="max-width:100%" id="barcode" ng-src="{{barcode}}">
+</div>
+<p class="txt-large is-sku">{{selectedSku.value}}</p>
+
+<h2 class="h-label">Quantity</h2>
+
+<div class="input-quantity">
+	<button class="button button-clear is-left" style="inline-block" ng-click="skuDecrement()"><i class="icon ion-minus-round size-24"></i></button>
+	<input class="item item-input item-floating-label" type="number" ng-model="selectedSku.quantity">
+	<button class="button button-clear is-right" style="inline-block" ng-click="skuIncrement()"><i class="icon ion-plus-round size-24"></i></button>
+</div>
+
+<button class="btn waves-effect waves-light button button-balanced button-block" ng-click="updateSku()">Done</button>
+<!-- <button class="button button-clear" ng-click="removeSku(selectedSku)">Remove</button> -->
+<button class="btn waves-effect waves-light button button-revert button-block" ng-click="removeSku(selectedSku)">Remove</button>

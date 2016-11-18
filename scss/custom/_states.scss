@@ -1,0 +1,34 @@
+.txt-center {
+	text-align: center;
+}
+
+.txt-right {
+	text-align: right;
+}
+
+.txt-large {
+	font-size: $font-size-xlarge;
+}
+
+// remove arrow spinner on number input
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+// vertical align
+.is-vertical-flex {
+	// -ms-flex-align: center;
+	// -webkit-align-items: center;
+	// -webkit-box-align: center;
+	// @include box-orient(vertical);
+}
+
+
+// waves fix for ios to prevent the animation of the material design pulse effect from breaking the parent container
+.waves-effect {
+	-webkit-mask-image: -webkit-radial-gradient(white, black);	
+}

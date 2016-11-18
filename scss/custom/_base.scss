@@ -1,0 +1,91 @@
+// prevent focus click
+
+body {
+	line-height: 1.2;
+	color: $color-text;
+}
+
+.btn.button,
+.btn.button.activated {
+	// background: transparent;
+	background: $color-btn;
+	text-transform: uppercase;
+	// background: $color-default;
+	color: $color-text-on-dark;
+	// font-size: $font-sm;
+	line-height: 1.2;
+	// letter-spacing: .2em;
+	font-weight: $font-bold;
+	//
+	// padding: 10px 20px;
+	// text-align: center;
+	@include border-radius($radius-round);
+	text-decoration: none;
+	margin-bottom: .5em;
+}
+
+.btn.button.button-positive,
+.btn.button.button-positive.activated {
+	background: $color-btn;
+	color: $color-text-on-dark;
+}
+
+.btn.button.button-balanced,
+.btn.button.button-balanced.activated {
+	background: $color-accent;
+	color: $color-text-on-dark;
+}
+
+.btn.button.button-revert,
+.btn.button.button-revert.activated {
+	background: transparent;
+	border: 2px solid $button-light-border;
+	color: $button-light-text;
+}
+
+// .button-clear.button-clear {
+//
+// }
+
+// .btn,
+// .btn.activated {
+// 	background: $color-btn;
+
+// 	// text-transform: capitalize; // removed as it creates issues with words such as iTunes changing it to ITunes.
+// 	// min-width: 10em;
+// 	// @include box-sizing(border-box);
+// 	// display: inline-block;
+// 	// ads margin bottom when stacked
+// 	// margin-bottom: .5em;
+// 	// -webkit-font-smoothing: antialiased;
+// 	// -webkit-appearance: none;
+// }
+
+// materialize overrides
+.btn-floating.btn-large i {
+	font-size: 25px;
+}
+
+.btn-floating,
+.btn-floating.activated,
+.btn-floating.btn-large,
+.btn-floating.btn-large.activated {
+	padding: 0;
+	background: $color-accent;
+}
+
+input,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+	line-height: 1.2;
+	background: #f5f5f5;
+}

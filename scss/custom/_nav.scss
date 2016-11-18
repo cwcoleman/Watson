@@ -1,0 +1,89 @@
+$height-bar-header: 150px;
+
+// .home.pane {
+// 	background: $color-link;
+// }
+
+.bar-header {
+	// background: $color-link;
+	background: $color-default;
+	color: $color-text-on-dark;
+}
+
+.bar-header .button {
+	color: $color-text-on-dark;
+}
+
+.bar-header .button {
+	background: none;
+}
+
+// close button
+body.menu-open .bar-header .button.ion-navicon:before {
+	content: "\f2d7";
+}
+
+
+// left nav
+
+.menu-content:before {
+	content: "";
+	display: block;
+	background: rgba(0,0,0, 0);
+	@include transition-property(background);
+  @include transition-duration(.1s);
+  @include transition-timing-function(linear);
+}
+
+body.menu-open .menu-content:before {
+	content: "";
+	// display: block;
+	background: rgba(0,0,0, .5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 4;
+}
+
+
+.menu-left .bar-header {
+	// @include background-image(linear-gradient($color-default, $color-accent));
+	// background-color: $color-default;
+	// background: $color-dark;
+	// background: $color-text-on-dark;
+	background: transparent;
+	// background-image: url('../img/bg-menu.jpg');
+	// @include background-size(cover);
+	// border-bottom: 2px solid $color-darker;
+	color: $color-text;
+	fill: $dark;
+	height: $height-bar-header !important;
+	flex-direction: column;
+}
+.menu-left .bar-header .logo {
+	padding: 3em 3em 2em;  // allows for more space at top which balances the extra top padding on the ion content
+	margin: 0 auto;
+	width: 100%;
+}
+.menu-left {
+	// background: #222;
+	// background: $color-dark;
+	// color: $color-text-on-dark;
+}
+
+.menu-left .item-content {
+	background: none;
+	// color: $color-text-on-dark;
+}
+
+.menu-left .item {
+	border: 0;
+	background: none;
+	// color: $color-text-on-dark;
+}
+
+.menu .has-header {
+	top: $height-bar-header !important;
+}

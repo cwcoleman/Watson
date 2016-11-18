@@ -1,0 +1,50 @@
+<ion-view title="SKU" class="home" hide-back-button="true">
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <div class="sku-stats">
+      <h2>Skus</h2>
+      <p class="node-number">{{getTotalNumSkus()}}</p>
+
+      <h2>Quantity</h2>
+      <p class="node-number">{{getSkuQuantity()}}</p>
+
+      <button class="btn waves-effect waves-light button button-full" ng-click="scanBarcode()">
+        <span ng-show="!$storage.skus.length">Start Scanning</span>
+        <span ng-show="$storage.skus.length">Continue Scanning</span>
+      </button>
+
+      <button class="btn waves-effect waves-light button button-full" style="background:none; box-shadow:none; border:2px solid white;" ng-click="showManualPopup()">Manually Add Sku</button>
+
+      <button class="btn waves-effect waves-light button button-full" style="background:none; box-shadow:none; border:2px solid white;" ng-click="doWatson()">Watson</button>
+
+    </div>
+
+    <!--empty-list-->
+    <ul class="list-sku list" ng-controller="QuantityCtrl">
+        <li class="item item-text-wrap myAnimation" ng-repeat="sku in $storage.skus | orderBy:'-id'"  ng-click="showPopup(sku)"> <!-- openModal() -->
+          <div class="row">
+            <div class="col col-75 node-sku">{{sku.value}}</div>
+            <div class="col txt-right node-quantity">{{sku.quantity}}</div>
+          </div>
+        </li>
+    </ul>
+
+    <div class="list-status" ng-show="!$storage.skus.length">
+      <i class="icon ion-ios-list-outline"></i>
+      <p>Start scanning to create your list!</p>
+    </div>
+
+    <fab live-displace="false">
+    </fab>
+  </ion-content>
+
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <button class="btn-floating btn-large waves-effect waves-light" ng-click="scanBarcode()"><i class="icon ion-android-expand"></i></button>
+  </div>
+
+</ion-view>

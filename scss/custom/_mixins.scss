@@ -1,0 +1,13 @@
+// mixins
+
+@mixin center-vertical-flex {
+	display:-ms-flexbox;
+	display:-moz-box;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:flex;
+	-ms-align-items:center;
+	-moz-align-items:center;
+	-webkit-align-items:center;
+	align-items:center;
+}

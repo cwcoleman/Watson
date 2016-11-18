@@ -1,0 +1,91 @@
+.sku-list .item:nth-last-child(1) {
+	margin-bottom: 120px;
+}
+
+// .scroll .list:after {
+// 	content: "You've reached the end of the list.";
+// 	text-align: center;
+// }
+
+.item {
+	@include transform(translate3d(0, 0, 0)); // should make animation smoother by using gpu
+	overflow: hidden;
+}
+
+.scroll .item .row {
+	margin: 0;
+}
+
+.item .node-sku,
+.item.node-sku,
+input.is-sku,
+.is-sku {
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1;
+	font-size: $font-size-large;
+}
+
+.item .node-quantity,
+.item.node-quantity,
+input.is-quanity,
+.is-quanity {
+	font-size: $font-size-large;
+}
+
+// spacing like google material's
+
+.menu-left .list {
+	padding-top: 8px;
+}
+
+.list .item-icon-left .icon {
+	left: 16px;
+	font-size: 24px;
+}
+.list .item-icon-left .icon::before {
+	width: 24px;
+}
+
+.item-complex.item-icon-left .item-content {
+	padding-left: 72px;
+}
+
+
+// animations
+
+.item.ng-enter {
+	@include transition-property(all);
+  @include transition-duration(.25s);
+  @include transition-timing-function(linear);
+	// -webkit-transform: translate3d(0, 0, 0);
+	// -moz-transform: translate3d(0, 0, 0);
+	// -ms-transform: translate3d(0, 0, 0);
+	// transform: translate3d(0, 0, 0);
+  // transition: .25s linear all;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.item.ng-enter.ng-enter-active {
+  height: 75px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.item.ng-leave {
+	@include transition-property(all);
+  @include transition-duration(.25s);
+  @include transition-timing-function(linear);
+  // transition: .25s linear all;
+  height: 75px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.item.ng-leave.ng-leave-active {
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}

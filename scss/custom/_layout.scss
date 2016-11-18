@@ -1,0 +1,167 @@
+// .scroll {
+// 	background-color: $color-default;
+// 	color: $color-text-on-dark
+// }
+
+.sku-stats {
+	// @include background-image(linear-gradient($color-default, $color-accent));
+	// @include background-image(linear-gradient($color-default, #0089b0));
+	// @include background-image(linear-gradient(#163d68, #3b9ccc));
+	// @include background-image(linear-gradient(#003682, #3885d5));
+	// @include background-image(linear-gradient(#004C73, #3F718A));
+	background-image: url(../img/slider.jpg);
+	background-color: $color-default;
+	@include background-size(cover);
+	background-position: center center;
+	color: $color-text-on-dark;
+	text-align: center;
+	padding: 2em;
+}
+
+// .sku-stats .button {
+// 	margin-bottom: 1em;
+// }
+
+// .sku-stats > h2 {
+// 	color: $color-text-on-dark;
+// 	// special font
+// 	text-transform: uppercase;
+// 	font-size: 1em;
+// 	font-weight: $font-bold;
+// 	@include border-radius($radius-round);
+// 	text-decoration: none;
+// }
+
+.sku-stats > h2 {
+	color: $color-text-on-dark;
+	// special font
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: $font-bold;
+	text-decoration: none;
+	margin-bottom: .5em;
+}
+
+// .sku-stats .button-light.button-clear {
+// 	color: $color-text-on-dark;
+// }
+
+.sku-stats .node-number {
+	font-size: 3em;
+	margin: 0 0 .5em;
+	font-weight: 200; // fix to correct size/
+	line-height: 1em;
+}
+
+.list-status {
+	text-align: center;
+	padding: 2em;
+	margin: 1em;
+	// background: $color-neutral;
+	color: $color-text-light;
+	font-size: 16px;
+}
+
+.list-status .icon {
+	font-size: 36px;
+	padding: .25em;
+	display: inline-block;
+}
+
+.sku-barcode {
+}
+
+.sku-barcode > img[src=""] { // hides img tag if src is empty to prevent empty div having height
+   display: none;
+}
+
+#barcode {
+	margin-bottom: 10px;
+	height: 20px; // prevents sky image from chaning height, causing popup to change height
+	// below fixes blurred image with popup transform css
+	// filter: none;
+	// -webkit-filter: blur(0px);
+	// -moz-filter: blur(0px);
+	// -ms-filter: blur(0px);
+	// filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+	-webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+.input-quantity {
+	// vertical-align: middle;
+	text-align: center;
+	position: relative;
+	margin-top: .5em;
+	margin-bottom: 2em;
+}
+
+.input-quantity .item-input {
+	// vertical-align: middle;
+	text-align: center;
+	// font-size: $font-size-xlarge;
+	font-size: $font-size-large;
+	font-weight: bold;
+	// height: 1.9em;
+	width: 5.5em;
+	margin: 0 auto;
+	// border-bottom: 1px solid $button-light-border;
+	top: 5px;
+}
+
+.input-quantity button {
+	@include border-radius(0);
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
+
+.input-quantity button.is-left {
+	left: 0;
+}
+
+.input-quantity button.is-right {
+	right: 0;
+}
+
+.input-quantity button .icon {
+	color: $color-text;
+	font-size: 1.5em;
+}
+
+
+// headers
+
+.h-label {
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: $font-bold;
+	text-decoration: none;
+	margin: 2em 0 1em;
+	color: $color-text-light;
+}
+
+// icons
+
+// button .icon:before,
+// .button.icon:before,
+// .button.icon-left:before,
+// .button.icon-right:before {
+// 	font-size: 1em;
+// }
+
+// popup
+
+.popup-head { // temp until removed
+	display: none;
+}
+
+.popup-container {
+	background: rgba(0,0,0, .3);
+}
+
+.popup-container .popup {
+	background-color: #fff;
+	padding: 1em;
+	text-align: center;
+}

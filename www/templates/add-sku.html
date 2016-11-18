@@ -1,0 +1,32 @@
+
+<div class="list">
+
+  <!--<form novalidate name="manuallyAddForm">-->
+
+    <h2 class="h-label">Sku</h2>
+    <div class="sku-barcode">
+    	<img style="max-width:100%" id="barcode" ng-src="{{barcode}}" src="">
+    </div>
+    <!-- <input class="txt-center is-sku" type="text" placeholder="Enter Sku" ng-model="inputSku.value" required> -->
+    <input class="txt-center is-sku" style="word-wrap: break-word;" type="text" ng-model="inputSku.value" placeholder="Enter your SKU" maxlength="40" ng-change="updateBarcode()" required>
+    <!--<textarea class="txt-center is-sku" type="text" ng-model="inputSku.value" placeholder="Enter your SKU" maxlength="40" ng-change="updateBarcode()" required>Enter Sku</textarea>-->
+
+    <h2 class="h-label">Quantity</h2>
+
+
+    <div class="input-quantity">
+      <button class="waves-effect waves-light button button-clear is-left" style="inline-block" ng-click="inputSkuDecrement()"><i class="icon ion-minus-round size-24"></i></button>
+      <input class="item item-input item-floating-label" type="number" min="1" placeholder="1" ng-model="inputSku.quantity">
+      <button class="button button-clear is-right" style="inline-block" ng-click="inputSkuIncrement()"><i class="icon ion-plus-round size-24"></i></button>
+    </div>
+
+    <div class="padding">
+      <!-- <input class="btn waves-effect waves-light button button-balanced button-block" type="submit" ng-click="addSku()" value="Add Sku" /> -->
+      <button class="btn waves-effect waves-light button button-balanced button-block" ng-click="addSku()" >Add Sku</button>
+      <!-- <button class="button button-block button-clear" ui-sref="app.skus" ng-click="hidePopup2()">Cancel</button> -->
+      <button class="btn waves-effect waves-light button button-revert button-block" ui-sref="app.skus" ng-click="hidePopup2()">Cancel</button>
+    </div>
+
+  <!--</form>-->
+
+</div>

@@ -1,0 +1,30 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.ferguson.mobile.watson"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.ferguson.mobile.watson"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ferguson.mobile.watson"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.ferguson.mobile.watson"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ferguson.mobile.watson"
+        }
+    }
+}
